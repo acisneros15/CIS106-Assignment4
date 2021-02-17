@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="ABRAHAM.CISNEROS"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-02-17 12:18:43 AM"/>
+        <attribute name="created" value="QUJSQUhBTS5DSVNORVJPUztOVVNaMjg4Mjk1Mjg7MjAyMS0wMi0xNzsxMjowMzo0NyBBTTszMTc3"/>
+        <attribute name="edited" value="QUJSQUhBTS5DSVNORVJPUztOVVNaMjg4Mjk1Mjg7MjAyMS0wMi0xNzsxMjoxODo0MyBBTTsyOzMyODg="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="warranty" type="Integer" array="False" size=""/>
+            <declare name="coa" type="Real" array="False" size=""/>
+            <declare name="total" type="Real" array="False" size=""/>
+            <input variable="coa"/>
+            <if expression="coa &gt; 1000">
+                <then>
+                    <assign variable="warranty" expression=".1"/>
+                </then>
+                <else/>
+            </if>
+            <if expression="coa &lt;= 1000">
+                <then>
+                    <assign variable="warranty" expression=".05"/>
+                </then>
+                <else/>
+            </if>
+            <assign variable="total" expression="coa + warranty"/>
+            <output expression="coa" newline="True"/>
+            <output expression="warranty" newline="True"/>
+            <output expression="total" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

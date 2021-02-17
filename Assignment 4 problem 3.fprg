@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="ABRAHAM.CISNEROS"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-02-17 12:03:40 AM"/>
+        <attribute name="created" value="QUJSQUhBTS5DSVNORVJPUztOVVNaMjg4Mjk1Mjg7MjAyMS0wMi0xNjsxMTozMTozNyBQTTszMTkw"/>
+        <attribute name="edited" value="QUJSQUhBTS5DSVNORVJPUztOVVNaMjg4Mjk1Mjg7MjAyMS0wMi0xNzsxMjowMzo0MCBBTTsyOzMyNzk="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="nob" type="Real" array="False" size=""/>
+            <input variable="nob"/>
+            <declare name="cpb" type="Real" array="False" size=""/>
+            <input variable="cpb"/>
+            <declare name="total" type="Real" array="False" size=""/>
+            <assign variable="total" expression="cpb * nob"/>
+            <declare name="ot" type="Real" array="False" size=""/>
+            <declare name="shipping" type="Real" array="False" size=""/>
+            <assign variable="ot" expression="shipping + total"/>
+            <if expression="ot &gt; 50.00">
+                <then>
+                    <assign variable="shipping" expression="0.00"/>
+                </then>
+                <else>
+                    <assign variable="shipping" expression="25.00"/>
+                </else>
+            </if>
+            <output expression="ot" newline="True"/>
+            <output expression="shipping" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="ABRAHAM.CISNEROS"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-02-16 11:20:08 PM"/>
+        <attribute name="created" value="QUJSQUhBTS5DSVNORVJPUztOVVNaMjg4Mjk1Mjg7MjAyMS0wMi0xNjswNTo1MDozNCBQTTszMTkx"/>
+        <attribute name="edited" value="QUJSQUhBTS5DSVNORVJPUztOVVNaMjg4Mjk1Mjg7MjAyMS0wMi0xNjsxMToyMDowOCBQTTsyOzMyOTU="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="qty" type="Real" array="False" size=""/>
+            <declare name="item" type="Integer" array="False" size=""/>
+            <declare name="itemA" type="Real" array="False" size=""/>
+            <declare name="itemB" type="Real" array="False" size=""/>
+            <declare name="up" type="Real" array="False" size=""/>
+            <declare name="extendedp" type="Real" array="False" size=""/>
+            <assign variable="extendedp" expression="qty * up"/>
+            <output expression="item" newline="True"/>
+            <output expression="up" newline="True"/>
+            <output expression="extendedp" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

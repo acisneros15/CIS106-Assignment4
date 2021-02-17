@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="ABRAHAM.CISNEROS"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-02-17 12:28:11 AM"/>
+        <attribute name="created" value="QUJSQUhBTS5DSVNORVJPUztOVVNaMjg4Mjk1Mjg7MjAyMS0wMi0xNzsxMjoxODo0NyBBTTszMTgz"/>
+        <attribute name="edited" value="QUJSQUhBTS5DSVNORVJPUztOVVNaMjg4Mjk1Mjg7MjAyMS0wMi0xNzsxMjoyODoxMSBBTTsxOzMyODM="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="lastname" type="String" array="False" size=""/>
+            <input variable="lastname"/>
+            <declare name="nod" type="Integer" array="False" size=""/>
+            <input variable="nod"/>
+            <declare name="grossincome" type="Integer" array="False" size=""/>
+            <input variable="grossincome"/>
+            <declare name="agi" type="Integer" array="False" size=""/>
+            <assign variable="agi" expression="grossincome - (nod * 12000)"/>
+            <declare name="incometaxrate" type="Real" array="False" size=""/>
+            <if expression="agi = 50000">
+                <then>
+                    <assign variable="incometaxrate" expression="(20/100)"/>
+                </then>
+                <else>
+                    <assign variable="incometaxrate" expression="(10/100)"/>
+                </else>
+            </if>
+            <declare name="it" type="Real" array="False" size=""/>
+            <assign variable="it" expression="agi * incometaxrate"/>
+            <if expression="it &lt; 0">
+                <then>
+                    <assign variable="it" expression="100"/>
+                </then>
+                <else/>
+            </if>
+            <output expression="lastname" newline="True"/>
+            <output expression="grossincome" newline="True"/>
+            <output expression="nod" newline="True"/>
+            <output expression="agi" newline="True"/>
+            <output expression="it" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

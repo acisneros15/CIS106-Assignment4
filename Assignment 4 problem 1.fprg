@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="ABRAHAM.CISNEROS"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-02-16 11:31:35 PM"/>
+        <attribute name="created" value="QUJSQUhBTS5DSVNORVJPUztOVVNaMjg4Mjk1Mjg7MjAyMS0wMi0xNjsxMToyMDoxMyBQTTszMTgy"/>
+        <attribute name="edited" value="QUJSQUhBTS5DSVNORVJPUztOVVNaMjg4Mjk1Mjg7MjAyMS0wMi0xNjsxMTozMTozNSBQTTszOzMyOTg="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="qty" type="Real" array="False" size=""/>
+            <input variable="qty"/>
+            <declare name="up" type="Real" array="False" size=""/>
+            <declare name="ep" type="Real" array="False" size=""/>
+            <assign variable="ep" expression="qty * up"/>
+            <declare name="tax" type="Real" array="False" size=""/>
+            <assign variable="tax" expression=".07 * ep"/>
+            <declare name="total" type="Real" array="False" size=""/>
+            <assign variable="total" expression="ep + tax"/>
+            <if expression="qty &gt;= 1000">
+                <then>
+                    <assign variable="up" expression="3.00"/>
+                </then>
+                <else>
+                    <assign variable="up" expression="5.00"/>
+                </else>
+            </if>
+            <output expression="qty" newline="True"/>
+            <output expression="up" newline="True"/>
+            <output expression="ep" newline="True"/>
+            <output expression="tax" newline="True"/>
+            <output expression="total" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
